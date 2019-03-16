@@ -25,6 +25,8 @@ cd openauto_build
 cmake -DCMAKE_BUILD_TYPE=Release -DRPI3_BUILD=TRUE -DAASDK_INCLUDE_DIRS="/home/pi/aasdk/include" -DAASDK_LIBRARIES="/home/pi/aasdk/lib/libaasdk.so" -DAASDK_PROTO_INCLUDE_DIRS="/home/pi/aasdk_build" -DAASDK_PROTO_LIBRARIES="/home/pi/aasdk/lib/libaasdk_proto.so" ../openauto
 make
 
+# Add Android Device rules
+sudo cp /home/pi/OpenAutoRPIScript/openauto.rules /etc/udev/rules.d/
 # Starting OpenAuto
 
 /home/pi/openauto/bin/autoapp
